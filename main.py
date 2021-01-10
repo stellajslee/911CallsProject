@@ -35,7 +35,7 @@ option = st.sidebar.selectbox('Emergencies', ('All', 'EMS', 'Fire', 'Traffic'))
 
 if option == 'All':
     # printing data
-    for x in range(0, 135):
+        for x in range(0, 135):
         if data[x][4] == 'EMS:':
             st.text(" * ")
             st.text("Time call was placed: " + str(data[x][6]))
@@ -47,10 +47,12 @@ if option == 'All':
                 st.text("Distance to Hospital (Hospital 1): "+ str(distanceE1)+ " km")
                 time = 7+4+2*distanceE1
                 st.text("Time to complete (in mins): " + str(time)+"\n\n")
+                totalTimeH1 = totalTimeH1 + time
             else:
                 st.text("Distance to Hospital (Hospital 2) "+ str(distanceE2) + " km")
                 time = 7+4+2*distanceE2
                 st.text("Time to complete (in mins): " + str(time)+"\n\n")
+                totalTimeH2 = totalTimeH2 + time
 
         elif data[x][4] == 'Fire:':
             st.text(" * ")
@@ -63,10 +65,12 @@ if option == 'All':
                 st.text("Distance to Fire Station (Fire Station 1): "+ str(distanceF1)+ " km")
                 time = 10+30+2*distanceF1/0.833
                 st.text("Time to complete (in mins): " + str(time)+"\n\n")
+                totalTimeF1 = totalTimeF1 + time
             else:
                 st.text("Distance to Fire Station (Fire Station 2): "+ str(distanceF2)+ " km")
                 time = 10+30+2*distanceF2/0.833
                 st.text("Time to complete (in mins): " + str(time)+"\n\n")
+                totalTimeF2 = totalTimeF2 + time
 
         elif data[x][4] == 'Traffic:':
             st.text(" * ")
@@ -79,11 +83,14 @@ if option == 'All':
                 st.text("Distance to Hospital (Hospital 1): "+ str(distanceT1)+ " km")
                 time = 7+4+2*distanceT1
                 st.text("Time to complete (in mins): " + str(time)+"\n\n")
+                totalTimeH1 = totalTimeH1 + time
             else:
                 st.text("Distance to Hospital (Hospital 2): "+ str(distanceT2)+ " km")
                 time = 7+4+2*distanceT2
                 st.text("Time to complete (in mins): " + str(time)+"\n\n")
-
+                totalTimeH2 = totalTimeH2 + time
+                
+                
 if option == 'EMS':
     for x in range(0, 135):
         if data[x][4] == 'EMS:':
