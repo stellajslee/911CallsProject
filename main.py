@@ -156,9 +156,9 @@ if option == 'Traffic':
                 time = 7 + 4 + 2 * distanceT2
                 st.text("Time to complete (in mins): " + str(time) + "\n\n")
 
-
+st.write(' * ')
 if st.button('Show total time for each vehicle'):
     st.write("Total time from start (Hospital 1): " + str(totalTimeH1))
     st.write("Total time from start (Hospital 2): " + str(totalTimeH2))
-    st.write("Total time from start (Fire Station 1):" + str(totalTimeF1))
+    st.write("Total time from start (Fire Station 1): " + str(totalTimeF1))
     st.write("Total time from start (Fire Station 2): " + str(totalTimeF2))
