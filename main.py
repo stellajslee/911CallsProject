@@ -54,7 +54,7 @@ if option == 'All':
                     st.write("Time to complete (in mins): " + str(time)+"\n\n")
                     totalTimeH1 = totalTimeH1 + time
                 else:
-                    st.write("Distance to Hospital (Hospital 2) "+ str(distanceE2) + " km")
+                    st.write("Distance to Hospital (Hospital 2): "+ str(distanceE2) + " km")
                     time = 7+4+2*distanceE2
                     st.write("Time to complete (in mins): " + str(time)+"\n\n")
                     totalTimeH2 = totalTimeH2 + time
@@ -110,7 +110,7 @@ if option == 'EMS':
                 time = 7+4+2*distanceE1
                 st.write("Time to complete (in mins): " + str(time)+"\n\n")
             else:
-                st.write("Distance to Hospital (Hospital 2) "+ str(distanceE2) + " km")
+                st.write("Distance to Hospital (Hospital 2): "+ str(distanceE2) + " km")
                 time = 7+4+2*distanceE2
                 st.write("Time to complete (in mins): " + str(time)+"\n\n")
 
