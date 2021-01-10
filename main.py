@@ -41,10 +41,10 @@ option = st.sidebar.selectbox('Emergencies', ('All', 'EMS', 'Fire', 'Traffic'))
 if option == 'All':
     # printing data
     if st.sidebar.button('Press to see total time spent for each location'):
-    st.sidebar.write("Total time from start (Hospital 1): " + str(totalTimeH1) + " mins")
-    st.sidebar.write("Total time from start (Hospital 2): " + str(totalTimeH2) + " mins")
-    st.sidebar.write("Total time from start (Fire Station 1): " + str(totalTimeF1) + " mins")
-    st.sidebar.write("Total time from start (Fire Station 2): " + str(totalTimeF2) + " mins")
+        st.sidebar.write("Total time from start (Hospital 1): " + str(totalTimeH1) + " mins")
+        st.sidebar.write("Total time from start (Hospital 2): " + str(totalTimeH2) + " mins")
+        st.sidebar.write("Total time from start (Fire Station 1): " + str(totalTimeF1) + " mins")
+        st.sidebar.write("Total time from start (Fire Station 2): " + str(totalTimeF2) + " mins")
 
         for x in range(0, 135):
             if data[x][4] == 'EMS:':
