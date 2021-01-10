@@ -49,14 +49,14 @@ if option == 'All':
                 distanceE1 = math.sqrt( ((hospital1lat-float(data[x][0]))**2)+((hospital1long-float(data[x][1]))**2) )*111
                 distanceE2= math.sqrt( ((hospital2lat-float(data[x][0]))**2)+((hospital2long-float(data[x][1]))**2) )*111
                 if distanceE1 > distanceE2:
-                    st.text("Distance to Hospital (Hospital 1): "+ str(distanceE1)+ " km")
+                    st.write("Distance to Hospital (Hospital 1): "+ str(distanceE1)+ " km")
                     time = 7+4+2*distanceE1
-                    st.text("Time to complete (in mins): " + str(time)+"\n\n")
+                    st.write("Time to complete (in mins): " + str(time)+"\n\n")
                     totalTimeH1 = totalTimeH1 + time
                 else:
-                    st.text("Distance to Hospital (Hospital 2) "+ str(distanceE2) + " km")
+                    st.write("Distance to Hospital (Hospital 2) "+ str(distanceE2) + " km")
                     time = 7+4+2*distanceE2
-                    st.text("Time to complete (in mins): " + str(time)+"\n\n")
+                    st.write("Time to complete (in mins): " + str(time)+"\n\n")
                     totalTimeH2 = totalTimeH2 + time
 
             elif data[x][4] == 'Fire:':
@@ -67,14 +67,14 @@ if option == 'All':
                 distanceF1 = math.sqrt( ((firestation1lat-float(data[x][0]))**2)+((firestation1long-float(data[x][1]))**2) )*111
                 distanceF2= math.sqrt( ((firestation2lat-float(data[x][0]))**2)+((firestation2long-float(data[x][1]))**2) )*111
                 if distanceF1 > distanceF2:
-                    st.text("Distance to Fire Station (Fire Station 1): "+ str(distanceF1)+ " km")
+                    st.write("Distance to Fire Station (Fire Station 1): "+ str(distanceF1)+ " km")
                     time = 10+30+2*distanceF1/0.833
-                    st.text("Time to complete (in mins): " + str(time)+"\n\n")
+                    st.write("Time to complete (in mins): " + str(time)+"\n\n")
                     totalTimeF1 = totalTimeF1 + time
                 else:
-                    st.text("Distance to Fire Station (Fire Station 2): "+ str(distanceF2)+ " km")
+                    st.write("Distance to Fire Station (Fire Station 2): "+ str(distanceF2)+ " km")
                     time = 10+30+2*distanceF2/0.833
-                    st.text("Time to complete (in mins): " + str(time)+"\n\n")
+                    st.write("Time to complete (in mins): " + str(time)+"\n\n")
                     totalTimeF2 = totalTimeF2 + time
 
             elif data[x][4] == 'Traffic:':
@@ -85,14 +85,14 @@ if option == 'All':
                 distanceT1 = math.sqrt( ((hospital1lat-float(data[x][0]))**2)+((hospital1long-float(data[x][1]))**2) )*111
                 distanceT2= math.sqrt( ((hospital2lat-float(data[x][0]))**2)+((hospital2long-float(data[x][1]))**2) )*111
                 if distanceT1 > distanceT2:
-                    st.text("Distance to Hospital (Hospital 1): "+ str(distanceT1)+ " km")
+                    st.write("Distance to Hospital (Hospital 1): "+ str(distanceT1)+ " km")
                     time = 7+4+2*distanceT1
-                    st.text("Time to complete (in mins): " + str(time)+"\n\n")
+                    st.write("Time to complete (in mins): " + str(time)+"\n\n")
                     totalTimeH1 = totalTimeH1 + time
                 else:
-                    st.text("Distance to Hospital (Hospital 2): "+ str(distanceT2)+ " km")
+                    st.write("Distance to Hospital (Hospital 2): "+ str(distanceT2)+ " km")
                     time = 7+4+2*distanceT2
-                    st.text("Time to complete (in mins): " + str(time)+"\n\n")
+                    st.write("Time to complete (in mins): " + str(time)+"\n\n")
                     totalTimeH2 = totalTimeH2 + time
                 
                 
@@ -106,13 +106,13 @@ if option == 'EMS':
             distanceE1 = math.sqrt( ((hospital1lat-float(data[x][0]))**2)+((hospital1long-float(data[x][1]))**2) )*111
             distanceE2= math.sqrt( ((hospital2lat-float(data[x][0]))**2)+((hospital2long-float(data[x][1]))**2) )*111
             if distanceE1 > distanceE2:
-                st.text("Distance to Hospital (Hospital 1): "+ str(distanceE1)+ " km")
+                st.write("Distance to Hospital (Hospital 1): "+ str(distanceE1)+ " km")
                 time = 7+4+2*distanceE1
-                st.text("Time to complete (in mins): " + str(time)+"\n\n")
+                st.write("Time to complete (in mins): " + str(time)+"\n\n")
             else:
-                st.text("Distance to Hospital (Hospital 2) "+ str(distanceE2) + " km")
+                st.write("Distance to Hospital (Hospital 2) "+ str(distanceE2) + " km")
                 time = 7+4+2*distanceE2
-                st.text("Time to complete (in mins): " + str(time)+"\n\n")
+                st.write("Time to complete (in mins): " + str(time)+"\n\n")
 
 
 if option == 'Fire':
@@ -127,13 +127,13 @@ if option == 'Fire':
             distanceF2 = math.sqrt(
                 ((firestation2lat - float(data[x][0])) ** 2) + ((firestation2long - float(data[x][1])) ** 2)) * 111
             if distanceF1 > distanceF2:
-                st.text("Distance to Fire Station (Fire Station 1): " + str(distanceF1) + " km")
+                st.write("Distance to Fire Station (Fire Station 1): " + str(distanceF1) + " km")
                 time = 10 + 30 + 2 * distanceF1 / 0.833
-                st.text("Time to complete (in mins): " + str(time) + "\n\n")
+                st.write("Time to complete (in mins): " + str(time) + "\n\n")
             else:
-                st.text("Distance to Fire Station (Fire Station 2): " + str(distanceF2) + " km")
+                st.write("Distance to Fire Station (Fire Station 2): " + str(distanceF2) + " km")
                 time = 10 + 30 + 2 * distanceF2 / 0.833
-                st.text("Time to complete (in mins): " + str(time) + "\n\n")
+                st.write("Time to complete (in mins): " + str(time) + "\n\n")
 
 
 if option == 'Traffic':
@@ -148,13 +148,13 @@ if option == 'Traffic':
             distanceT2 = math.sqrt(
                 ((hospital2lat - float(data[x][0])) ** 2) + ((hospital2long - float(data[x][1])) ** 2)) * 111
             if distanceT1 > distanceT2:
-                st.text("Distance to Hospital (Hospital 1): " + str(distanceT1) + " km")
+                st.write("Distance to Hospital (Hospital 1): " + str(distanceT1) + " km")
                 time = 7 + 4 + 2 * distanceT1
-                st.text("Time to complete (in mins): " + str(time) + "\n\n")
+                st.write("Time to complete (in mins): " + str(time) + "\n\n")
             else:
-                st.text("Distance to Hospital (Hospital 2): " + str(distanceT2) + " km")
+                st.write("Distance to Hospital (Hospital 2): " + str(distanceT2) + " km")
                 time = 7 + 4 + 2 * distanceT2
-                st.text("Time to complete (in mins): " + str(time) + "\n\n")
+                st.write("Time to complete (in mins): " + str(time) + "\n\n")
 
 st.write(' * ')
 if st.sidebar.button('Press to see total time spent for each location'):
