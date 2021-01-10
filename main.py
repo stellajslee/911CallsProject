@@ -25,6 +25,11 @@ hospital1long = -75.3965480
 hospital2lat = 40.0329254
 hospital2long = -75.2750179
 
+totalTimeF1=0
+totalTimeF2=0
+totalTimeH1=0
+totalTimeH2=0
+
 # import csv
 series1 = pd.read_csv('WEC.csv')
 with open('WEC.csv') as csvDataFile:
