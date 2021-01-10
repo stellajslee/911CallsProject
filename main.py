@@ -157,7 +157,7 @@ if option == 'Traffic':
                 st.text("Time to complete (in mins): " + str(time) + "\n\n")
 
 st.write(' * ')
-if st.sidebar.button('Show total time spent for each location'):
+if st.sidebar.button('Press to see total time spent for each location'):
     st.write("Total time from start (Hospital 1): " + str(totalTimeH1) + " mins")
     st.write("Total time from start (Hospital 2): " + str(totalTimeH2) + " mins")
     st.write("Total time from start (Fire Station 1): " + str(totalTimeF1) + " mins")
