@@ -12,7 +12,7 @@ st.write("""
 st.write('WEC 2021 | Stella Lee, Alexandria Lin, Isabel Higgon, Mahira Moftah')
 
 # image for web app
-image = Image.open('/Users/stellalee/Desktop/WEC/one.jpg')
+image = Image.open('one.jpg')
 st.image(image, use_column_width = True)
 
 # co-ordinates of fire stations and hospitals
@@ -26,8 +26,8 @@ hospital2lat = 40.0329254
 hospital2long = -75.2750179
 
 # import csv
-series1 = pd.read_csv('/Users/stellalee/Desktop/WEC/WEC.csv')
-with open('/Users/stellalee/Desktop/WEC/WEC.csv') as csvDataFile:
+series1 = pd.read_csv('WEC.csv')
+with open('WEC.csv') as csvDataFile:
     data = list(csv.reader(csvDataFile))
     csvReader = csv.reader(csvDataFile)
 
